@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     table.string('name');
     table.string('texture');
     table.integer('owner_id').unsigned()
-    table.foreign('owner_id').references('user.user_id')
+    table.foreign('owner_id').references('user.id')
 
 
 

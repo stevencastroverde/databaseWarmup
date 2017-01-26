@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var validator = require('../db/validations')
-const queries = require('../db/queries')
+const queries = require('../db/userQueries')
 const bcrypt = require('bcrypt')
 
 /* GET users listing. */
@@ -16,7 +16,7 @@ router.post('/login', function(req, res, next) {
                 res.send(user)
               } else {
                 res.json({
-                  message: 'You password is incorrect'
+                  message: 'Your password is incorrect'
                 })
               }
             })
